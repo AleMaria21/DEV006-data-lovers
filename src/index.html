@@ -16,13 +16,14 @@
 <body>
   <header>  
     <section class="sectionBienvenida">
-     <p class="msjBienvenida">Bienvenidos a la Fan Page Ghibli Lovers</p>
-    
-     <section class="apps">
-       <img src="Assets/twitter.png" alt="logo twitter">
-       <img src="Assets/youtube.png" alt="Logo YouTube">
-       <img src="Assets/facebook.png" alt="Logo facebook">
-     </section>
+      <p class="msjBienvenida">Bienvenidos a la Fan Page Ghibli Lovers</p> 
+ 
+      <!---------------------------- APPS ----------------------------->
+      <section class="apps">
+        <img class="iconApp" src="Assets/twitter.png" alt="Logo twitter">
+        <img class="iconApp" src="Assets/youtube.png" alt="Logo YouTube">
+        <img class="iconApp" src="Assets/facebook.png" alt="Logo Facebook">
+      </section>
     </section>
 
     <section class="sectionLogo">
@@ -33,15 +34,92 @@
 
   <nav class="navContainer">
     <label class="containerInput" for="">
-       <input type="search" placeholder="Buscar películas">
-       <img class="iconLupa" src="./Assets/search.png" alt="">
+        <input type="search" placeholder="Buscar películas">
+        <img class="iconLupa" src="./Assets/search.png" alt="Icono de una lupa color blanco">
     </label>
     
+    <!--------------------------- OPCIONES DE NAVEGACIÓN ----------------------------->
     <a href="https://ghibli-park.jp/" target="_blank">Parque Ghibli</a>
     <a href="https://www.ghibli.jp/history/" target="_blank">Historia Ghibli</a>
     <a href="https://www.ghibli-museum.jp/" target="_blank">Museo Mitaka no Mori Ghibli</a>
     <a href="https://www.ghibli-museum-shop.jp/" target="_blank">Tienda Online</a>
- </nav>
+</nav>
+
+<!--------------------------- MAIN ----------------------------->
+<main class="container">
+  <!--------------------------- SECCIÓN DE VIDEO ----------------------------->
+  <section class="portadasContainer">
+    <div class="portadaMascara"></div>
+
+      <div class="portadaInfo">
+        <div class="titleLogoContainer"></div>
+        <div class="parrafoContainer"></div>
+        <button class="button"></button>
+      </div>
+      <div class="portadaVideo"></div>
+  </section>
+
+  <!--------------------------- TITULO: ANIMATED FILMS ----------------------------->
+  <section class="containerTitlePelicula">
+    <p class="titlePeliculas">Animated Films</p>
+  </section>
+
+  <!--------------------------- SECCIÓN DE FILTROS ----------------------------->
+  <section class="containerFilters">
+    <p class="subtitleFiltros">Filtros</p>
+
+    <select name="filterAZ" class="selectOption" id="filterAZ">
+      <option disabled selected>Alphabet</option>
+      <option value="">A-Z</option>
+      <option value="">Z-A</option>
+    </select>
+
+    <select name="director" class="selectOption" id="filterDirector">
+      <option disabled selected>Director</option>
+      <option value="">Hayao Miyazaki</option>
+      <option value="">Isao Takahata</option>
+      <option value="">Yoshifumi Kondo</option>
+      <option value="">Hiroyuki Morita</option>
+      <option value="">Goro Miyazaki</option>
+      <option value="">Hiromasa Yonebayashi</option>
+    </select>
+
+    <select name="producer" class="selectOption" id="filterProducer">
+      <option disabled selected>Producer</option>
+      <option value="">Isao Takahata</option>
+      <option value="">Hayao Miyazaki</option>
+      <option value="">Toru Hara</option>
+      <option value="">Toshio Suzuki</option>
+      <option value="">Yoshiaki Nishimura</option>
+    </select>
+      
+    <select name="year" class="selectOption" id="filterYear">
+      <option disabled selected>Year</option>
+      <option value="">Ascendente</option>
+      <option value="">Descendente</option>
+    </select>
+  </section>
+
+   <!--------------------------- SECCIÓN CONTADOR DE PELICULAS ----------------------------->
+  <section class="sectionContadorMovies">
+    <img class="imgContador" src="./Assets/icon1.png" alt="Imagen de un personaje de la Pelicula Tototoro">
+    <p class="contadorParrafo" id="contadorMovies">Estas visualizando 20 películas</p>
+  </section>
+
+  <!--------------------------- SECCIÓN DE POSTERS ----------------------------->
+  <section class="postersContainer"></section>
+
+  
+
+</main>
+
+<!--------------------------- FOOTER ----------------------------->
+<footer class="footerContainer">
+  <p class="parrafoFooter">Copyright © 2023 Alejandra Martínez & Melissa Aquijes</p>
+</footer>
+
+<script src="./main.js" type="module"></script>
+
 
 </body>
 </html>

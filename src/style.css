@@ -102,3 +102,288 @@ html {
     color: var(--pink-color);
 }
  
+/* ------------------ PÁGINA DE PELÍCULAS ------------------ */
+header {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat (2, auto);
+}
+.sectionBienvenida {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black-color);
+}
+.msjBienvenida {
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white-color);
+    padding: 8px 0px 8px 50px;
+    letter-spacing: 2px;
+}
+.apps {
+    padding: 8px 50px 8px 0px;
+}
+.iconApp {
+    margin-left: 30px;
+}
+.sectionLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.logoGhibli {
+    width: 100px;
+    padding: 8px;
+}
+.titleghibliLovers {
+    font-size: 3rem;
+}
+.navContainer {
+    width: 100%;
+    padding: 12px;
+    display: grid;       
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    background: var(--black-color);
+}
+.containerInput {
+    display: flex;
+    width: 250px;
+    background: var(--lighBlack--color);
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+}
+.containerInput input {
+    background: none;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    outline: none;
+    color: white;
+}
+.containerInput::placeholder {
+    color: #E6E6E6;
+}
+.iconLupa{
+    padding: 7px;
+}
+.navContainer a {
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    color: var(--white-color);
+}
+.navContainer a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------ SECCIÓN DE VIDEO ------------------ */
+.container {
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 50vh auto;
+    background-color: var(--lighBlack--color);
+}
+.portadasContainer {
+    position: sticky;
+    top:0;
+    grid-column: 2/3;
+}
+.portadaMascara {
+    position: absolute;
+    background: linear-gradient(to top,#181818 15%,transparent);
+    width: 70vw;
+    height: 3vw;
+    margin-top: calc(50vh - 3vw);
+    z-index: 2;
+}
+.portadaInfo {
+    position: absolute;  
+    background: linear-gradient(to right,#181818 10%,#181818 15%,#181818,20%,#181818 25%,#181818 30%, #181818 35%,#181818 45%,#181818 45%,transparent);  
+    height: 50vh;
+    width: 70vw;
+    display: block;
+    z-index: 1; 
+} 
+.titleLogoContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2vh;
+    width: 25vw;
+    max-height: 20vh;
+}
+.titleLogoContainer .imgTitle {
+    width: 70%;
+}
+.parrafoContainer{
+    width: 25vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    height: 5vw;       
+}
+.parrafoContainer .parrafo {
+    color: var(--white-color);
+    text-align: justify;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.6rem;
+}
+
+.portadaVideo {
+    position: relative; 
+    height: 100%;
+    background-color: var(--lighBlack--color);
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+}
+.portadaVideo video {
+    filter:brightness(1.2);
+    min-width: 250px;
+}
+
+/* ------------------ TITULO: ANIMATED FILMS ------------------ */
+.containerTitlePelicula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 9vh;
+    background: linear-gradient(90deg, #333333 5.1%, #181818 95.03%);
+    grid-column: 2/3;
+}
+.titlePeliculas {
+    font-weight: 700;
+    color: var(--white-color);
+    font-size: 4rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    letter-spacing: 18px;
+}
+
+/* ------------------ SECCIÓN DE POSTERS  ------------------ */
+.postersContainer {
+    grid-column: 2/3;
+    background-color: var(--lighBlack--color);
+    /* display: flex;
+    justify-content:space-between; */
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    row-gap: 80px;
+    column-gap: 50px;
+    /* flex-wrap: wrap; */
+    margin: 30px 0px 80px;
+}
+.postersContainer .poster {
+    width: 15vw;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 210px;
+}
+.containerFrase1 {
+    background: var(--white-color);
+    grid-area: 2/3/3/5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fraseGhibli {
+    color: var(--pink-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2.3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+.containerFrase2 {
+    background: var(--white-color);
+    grid-area: 5/1/6/3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sabiasQueGhibli {
+    color: var(--pink-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 15px;
+}
+
+/* ------------------ FOOTER ------------------ */
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background: var(--black-color);
+}
+.parrafoFooter {
+    color: var(--white-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* ------------------ SECCIÓN DE FILTROS  ------------------ */
+.containerFilters {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 2/3;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+.subtitleFiltros {
+    color: var(--white-color);
+    font-size: 2rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    letter-spacing: 3px;
+}
+.selectOption {
+    width: 18vh;
+    height: 50%;
+    border-radius: 7px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.selectOption:hover, :focus {
+    box-shadow: 0px 0px 4px 0 #d166dd, 0px 0px 4px 0 #d66, 0px 0px 4px 0 #ddc566;
+    outline: none;
+}
+
+/* ------------------ SECCIóN CONTADOR DE PELICULAS ------------------ */
+.sectionContadorMovies {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    width: 100%;
+    grid-column: 2/3;
+    margin-top: 40px;
+}
+.contadorParrafo {
+    color: var(--white-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.imgContador {
+    width: 30px;
+}
