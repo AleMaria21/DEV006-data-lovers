@@ -1,13 +1,14 @@
+
 //FILTRADO POR PRODUCTOR
 //Crea un nueva lista arrayProductores, mostrando la data por productor (map) y filtrando los nombres de productores sin repetir (indexOf).
 export function arrayProductores (ghibliData) {
  return ghibliData.map(function(peliculas) {
-   return peliculas.producer; 
-  }).filter(function (producer, index, arrayProductores) {
-    return arrayProductores.indexOf(producer) === index;
+   return peliculas.producer
+  }).filter(function(producer, index, arrayProductores) {
+   return arrayProductores.indexOf(producer) === index;
   });
-}; 
-
+};  
+  
 //Filtra desde la data las peliculas del productor seleccionado y devuelve un array con los valores de los posters
 export function postersProducer (ghibliData, selectProductor) {
  return ghibliData.filter(function(peliculas) {
@@ -51,14 +52,14 @@ export function arrayAñoDescendente (ghibliData) {
 // (3) Crea una lista a partir ghibliData, reorganizando los valores del titulo ascendentemente
 export function arrayAlfabetoAZ (ghibliData) {
   return ghibliData.sort(function(a, b) {
-    return a.title < b.title
+    return a.title > b.title ? 1 : -1;
   });
 };
 
 // Crea una lista a partir ghibliData, reorganizando los valores del titulo descendentemente
  export function arrayAlfabetoZA (ghibliData) {  
   return ghibliData.sort(function(a, b) {
-    return b.title < a.title
+    return a.title < b.title ? 1 : -1;
   });
 };
 
@@ -81,6 +82,10 @@ export function postersEspecie(ghibliData, selectSpecie) {
   return peliculas.poster;
     });
 };
+
+
+
+
 
 
 
