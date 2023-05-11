@@ -10,11 +10,10 @@ export function arrayProductores (ghibliData) {
 };  
   
 //Filtra desde la data las peliculas del productor seleccionado y devuelve un array con los valores de los posters
-export function postersProducer (ghibliData, selectProductor) {
+export function filterDataProducer (ghibliData, selectProductor) {
  return ghibliData.filter(function(peliculas) {
+  console.log(peliculas.producer === selectProductor)
    return peliculas.producer === selectProductor;
-  }).map(function(peliculas) {
-     return peliculas.poster;
     });
 };
 
@@ -29,13 +28,10 @@ export function arrayDirectores (ghibliData) {
 }; 
 
 //(3) Filtra desde la data las peliculas del productor seleccionado y devuelve un array con los valores de los posters
-export function postersDirector (ghibliData, selectDirector) {
-  return ghibliData.filter(function(peliculas) {
-   return peliculas.director === selectDirector;
-  }).map(function(peliculas) {
-     return peliculas.poster;
-    });
- };
+export const filterDataDirector = (data, nameDirector) => {
+  const newDataDirector = data.filter(movie => movie.director === nameDirector);
+  return newDataDirector;
+};
 
 // FILTRADO POR AÑO
 // Crea una lista a partir ghibliData, reorganizando los valores del año ascendentemente
@@ -66,21 +62,19 @@ export function arrayAlfabetoAZ (ghibliData) {
 // FILTRADO POR ESPECIE
 // (1) Crea un nueva lista arrayEspecies, mostrando la data por especie (map) y filtrando las especies sin repetir (indexOf).
 export function arrayEspecies (ghibliData) {
-  const espciesSinRepetir = ghibliData
-  .map(peliculas => peliculas.people.map(personaje => personaje.specie))
-  .flat();
+  const espciesSinRepetir = ghibliData.map(peliculas => 
+    peliculas.people.map(personaje => 
+      personaje.specie)).flat();
   return [...new Set(espciesSinRepetir)]; 
 };
 
-//(3) Filtra desde la data las peliculas del productor seleccionado y devuelve un array con los valores de los posters
-export function postersEspecie(ghibliData, selectSpecie) {
-  return ghibliData.filter((peliculas) => {
+//(3) Filtra desde la data las peliculas de la especie seleccionada y devuelve un array con los valores de los posters
+export function filterDataSpecie(dataStudioGhibli, selectSpecie) {
+  return dataStudioGhibli.filter((peliculas) => {
     return peliculas.people.some ((personaje) => {
       return personaje.specie === selectSpecie;
     });
-  }).map(function(peliculas) {
-  return peliculas.poster;
-    });
+  })
 };
 
 
