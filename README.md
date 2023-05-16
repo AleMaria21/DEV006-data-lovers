@@ -138,7 +138,7 @@ A continuación presentamos una lista que resumen las criticas que recibimos de 
 ## 6. Interfaz de usuario
 ¡Gracias por visitar nuestra página, descubre por que estas películas son tan queridas y disfruta explorando de la magia de Studio Ghibli con nosotros!
 
-![prototipo](src/Assets/interfaz.png)
+![prototipo](src/Assets/interfa.png)
 
 
 
