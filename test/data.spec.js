@@ -1,4 +1,4 @@
-import {arrayProductores, filterDataProducer, arrayDirectores, filterDataDirector, arrayAñoAscendente, arrayAñoDescendente, arrayAlfabetoAZ, arrayAlfabetoZA, arrayEspecies, filterDataSpecie} from '../src/data.js';
+import {arrayProductores, filterDataProducer, arrayDirectores, filterDataDirector, arrayAñoAscendente, arrayAñoDescendente, arrayAlfabetoAZ, arrayAlfabetoZA} from '../src/data.js';
 const ghibliData = [
   {
     "title": "Castle in the Sky",
@@ -46,13 +46,13 @@ describe('filterDataProducer', () => {
   it('Devuelve una lista de películas para el productor "Isao Takahata"', () => {
     expect(filterDataProducer(ghibliData, "Isao Takahata")).toEqual([
       {
-      "title": "Castle in the Sky",
-      "director": "Hayao Miyazaki",
-      "producer": "Isao Takahata",
-      "release_date": "1986",
-      "rt_score": "95",
-      "people": [{"specie": "Human"}]  
-    }])
+        "title": "Castle in the Sky",
+        "director": "Hayao Miyazaki",
+        "producer": "Isao Takahata",
+        "release_date": "1986",
+        "rt_score": "95",
+        "people": [{"specie": "Human"}]  
+      }])
   });     
    
   it('Devuelve una lista de películas para el productor "Toshio Suzuki"', () => {
@@ -80,12 +80,12 @@ describe('filterDataProducer', () => {
   it('Devuelve una lista de posters para el productor "Toru Hara"', () => {
     const posters = filterDataProducer(ghibliData, "Toru Hara");
     expect(posters).toEqual([{
-     "title": "Grave of the Fireflies",
-     "director": "Isao Takahata",
-     "producer": "Toru Hara",
-     "release_date": "1988",
-     "rt_score": "97",
-     "people": [{"specie": "Human"}]
+      "title": "Grave of the Fireflies",
+      "director": "Isao Takahata",
+      "producer": "Toru Hara",
+      "release_date": "1988",
+      "rt_score": "97",
+      "people": [{"specie": "Human"}]
     }]);
   });
 });
@@ -137,7 +137,7 @@ describe('filterDataDirector', () => {
         "rt_score": "89",
         "people": [{"specie": "Cat"}]  
       }]);
-   });
+  });
 
   it('Devuelve una lista de posters para el productor "Hiromasa Yonebayashi"', () => {
     const posters = filterDataDirector(ghibliData, "Hiromasa Yonebayashi");
@@ -188,11 +188,11 @@ describe('arrayAlfabetoAZ', () => {
     expect(typeof arrayAlfabetoAZ).toBe("function");
   });
   it("Debería retornar las peliculas en orden ascendente por alfabeto", () => {
-   const dataAscendente = arrayAlfabetoAZ(ghibliData);
-   expect(dataAscendente[0].title).toEqual('Castle in the Sky');
-   expect(dataAscendente[1].title).toEqual("Grave of the Fireflies");
-   expect(dataAscendente[2].title).toEqual("The Cat Returns");
-   expect(dataAscendente[3].title).toEqual("When Marnie Was There");
+    const dataAscendente = arrayAlfabetoAZ(ghibliData);
+    expect(dataAscendente[0].title).toEqual('Castle in the Sky');
+    expect(dataAscendente[1].title).toEqual("Grave of the Fireflies");
+    expect(dataAscendente[2].title).toEqual("The Cat Returns");
+    expect(dataAscendente[3].title).toEqual("When Marnie Was There");
   });
 });  
 
@@ -210,7 +210,7 @@ describe('arrayAlfabetoZA', () => {
 }); 
 
 
-const especiesSINrepetir = ["Human", "Cat"]
+/*const especiesSINrepetir = ["Human", "Cat"]
 describe('arrayEspecies', () => {
   it('Devulve un array con las especies de los personajes sin repetir', () => {
     expect(arrayEspecies(ghibliData)).toEqual(expect.arrayContaining(especiesSINrepetir));
@@ -258,7 +258,7 @@ describe('filterDataSpecie', () => {
         "people": [{"specie": "Cat"}]
       }
     ]));
- });  
+  });  
 
-});
+}); */
 

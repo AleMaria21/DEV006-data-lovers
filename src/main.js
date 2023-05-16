@@ -1,4 +1,4 @@
-import {arrayProductores, filterDataProducer, arrayDirectores, filterDataDirector, arrayAñoAscendente, arrayAñoDescendente, arrayAlfabetoAZ, arrayAlfabetoZA, arrayEspecies, filterDataSpecie} from "./data.js";
+import {arrayProductores, filterDataProducer, arrayDirectores, filterDataDirector, arrayAñoAscendente, arrayAñoDescendente, arrayAlfabetoAZ, arrayAlfabetoZA} from "./data.js";
 
 const postersContainer = document.querySelector('.postersContainer');
 const portadaVideo = document.querySelector('.portadaVideo');
@@ -23,8 +23,6 @@ const filterAlphabet = document.getElementById('filterAlphabet');
 const filterDirector = document.getElementById('filterDirector');
 const filterProducer = document.getElementById('filterProducer');
 const filterYear = document.getElementById('filterYear');
-const filterSpecie = document.getElementById('filterSpecie');
-
 
 
 fetch('./data/ghibli/ghibli.json')
@@ -166,144 +164,142 @@ fetch('./data/ghibli/ghibli.json')
     }; 
     postersGhibli(dataStudioGhibli);
 
-   //FILTRADO
-   //FILTRADO POR PRODUCTOR
-   //(1) Inserta los  del arrayProductores en select filterProducer
-   const createProducerList = (ghibliData) => {
-   //(1.2)Itera y crea un opcion para darle un texto y un valor a los elementos del arrayProductores
-     arrayProductores(ghibliData).forEach(function(producer) {
-       const opcionProductor= document.createElement("option");
-       opcionProductor.text = producer;
-       opcionProductor.value = producer;
-       filterProducer.add(opcionProductor);
+    //FILTRADO
+    //FILTRADO POR PRODUCTOR
+    //(1) Inserta los  del arrayProductores en select filterProducer
+    const createProducerList = (ghibliData) => {
+      //(1.2)Itera y crea un opcion para darle un texto y un valor a los elementos del arrayProductores
+      arrayProductores(ghibliData).forEach(function(producer) {
+        const opcionProductor= document.createElement("option");
+        opcionProductor.text = producer;
+        opcionProductor.value = producer;
+        filterProducer.add(opcionProductor);
       });
     };
-   createProducerList (dataStudioGhibli);
+    createProducerList (dataStudioGhibli);
 
-   //(2)Agrega un evento cuando se selecciona un productor, vaciando postersContainer para agregarle postersProducerIMG
-   filterProducer.addEventListener("change", () => {
-     const seletedProducer = filterProducer.value
-     let peliculasfiltradasProductor;
+    //(2)Agrega un evento cuando se selecciona un productor, vaciando postersContainer para agregarle postersProducerIMG
+    filterProducer.addEventListener("change", () => {
+      const seletedProducer = filterProducer.value
+      let peliculasfiltradasProductor;
 
-     if (seletedProducer === "all") {
-      peliculasfiltradasProductor = postersGhibli(dataStudioGhibli)
-     } else {
-      peliculasfiltradasProductor = filterDataProducer(dataStudioGhibli, seletedProducer)
-     }
+      if (seletedProducer === "all") {
+        peliculasfiltradasProductor = postersGhibli(dataStudioGhibli)
+      } else {
+        peliculasfiltradasProductor = filterDataProducer(dataStudioGhibli, seletedProducer)
+      }
       postersGhibli(peliculasfiltradasProductor);
     });
     
-
-   //FILTRADO POR DIRECTOR
-   //(1) Inserta los valores del arrayDirectores en select filterDirector
-   const createDirectorList = (ghibliData) => {
+    //FILTRADO POR DIRECTOR
+    //(1) Inserta los valores del arrayDirectores en select filterDirector
+    const createDirectorList = (ghibliData) => {
     //(1.2) Itera y crea un opcion para darle un texto y un valor a los elementos del arrayDirectores
-    arrayDirectores(ghibliData).forEach(function(director) {
-     const opcionDirector= document.createElement("option");
-     opcionDirector.text = director;
-     opcionDirector.value = director;
-     filterDirector.add(opcionDirector);
-    });
-   };
-   createDirectorList(dataStudioGhibli);
-   //(2)Agrega un evento cuando se selecciona un productor, vaciando postersContainer para agregarle postersDirectorIMG
-   filterDirector.addEventListener("change", () => {
-     //Obtiene el valor del director seleccionado
-     const selectedDirector = filterDirector.value
-     let peliculasfiltradasDirector;
-
-     if(selectedDirector === "all") {
-       peliculasfiltradasDirector = postersGhibli(dataStudioGhibli);
-      } else {
-       peliculasfiltradasDirector = filterDataDirector(dataStudioGhibli, selectedDirector);
-      }
-     postersGhibli(peliculasfiltradasDirector);
-    });
-  
-   //FILTRADO POR AÑO
-   const createYearList = () => {
-   //(1) Añade dos opciones "Ascendente" y "Descendente" en el select filterYear
-   const opcionAñoAscendente = document.createElement("option");
-    opcionAñoAscendente.value = "ascendente";
-    opcionAñoAscendente.textContent = "Ascendente"
-    filterYear.add(opcionAñoAscendente);
-  
-   const opcionAñoDescendente = document.createElement("option");
-    opcionAñoDescendente.value = "descendente";
-    opcionAñoDescendente.textContent = "Descendente"
-    filterYear.add(opcionAñoDescendente);
-   };
-   createYearList();
- 
-   //(2) Agrega un evento al elegrir una opcion del select
-   filterYear.addEventListener("change", () => {
-  
-    //(3) Deacuerdo al valor seleccionado mostrará el array filtrado correspondiente en la seccion de posters.
-    let peliculasfiltradasAño;
-    if( filterYear.value === "ascendente") {
-      peliculasfiltradasAño = arrayAñoAscendente(dataStudioGhibli);
-    } else if(filterYear.value === "descendente") {
-       peliculasfiltradasAño = arrayAñoDescendente(dataStudioGhibli);
-      }
-     postersGhibli(peliculasfiltradasAño);
-   });
-
- 
-   //FILTRADO POR ALFABETO
-   const createAlfabetoFilter = () => {
-   
-   //(1) Añade dos opciones "A-Z" y "Z-A" en el selectfilterAlfabeto
-   const opcionAZ = document.createElement("option");
-   opcionAZ.value = "a-z";
-   opcionAZ.textContent = "A-Z"
-   filterAlphabet.add(opcionAZ);
-   
-   const opcionZA = document.createElement("option");
-   opcionZA.value = "z-a";
-   opcionZA.textContent = "Z-A"
-   filterAlphabet.add(opcionZA);
-   };
-   createAlfabetoFilter();
-
-   //(2) Agrega un evento al elegrir una opcion del select, toma el valor seleccionado y vacia la seccion de posters
-   filterAlphabet.addEventListener("change", () => {
-    
-    //(5) De acuerdo al valor seleccionado mostrará el array filtrado correspondiente en la seccion de posters.
-    let peliculasfiltradasAlfabeto;
-      if(filterAlphabet.value === "a-z") {
-       peliculasfiltradasAlfabeto = arrayAlfabetoAZ(dataStudioGhibli);
-      } else if(filterAlphabet.value === "z-a") {
-       peliculasfiltradasAlfabeto = arrayAlfabetoZA(dataStudioGhibli);
-    }
-     postersGhibli(peliculasfiltradasAlfabeto);
-   });   
- 
-   //FILTRADO POR ESPECIE
-   //(2) Inserta los valores del arrayProductores en select filterProducer
-   const createSpecieList = () => {
-     const filterSpecie = document.getElementById("filterSpecie")
-     //Itera y crea un opcion para darle un texto y un valor a los elementos del arrayProductores
-     arrayEspecies(dataStudioGhibli).forEach(function(specie) {
-       const opcionSpecie = document.createElement("option");
-       opcionSpecie.text = specie;
-       opcionSpecie.value = specie;
-       filterSpecie.add(opcionSpecie);
+      arrayDirectores(ghibliData).forEach(function(director) {
+        const opcionDirector= document.createElement("option");
+        opcionDirector.text = director;
+        opcionDirector.value = director;
+        filterDirector.add(opcionDirector);
       });
     };
-   createSpecieList(); 
+    createDirectorList(dataStudioGhibli);
+    //(2)Agrega un evento cuando se selecciona un productor, vaciando postersContainer para agregarle postersDirectorIMG
+    filterDirector.addEventListener("change", () => {
+      //Obtiene el valor del director seleccionado
+      const selectedDirector = filterDirector.value
+      let peliculasfiltradasDirector;
 
-   //Agrega un evento cuando se selecciona un productor, cambiando el valor del select 
-   filterSpecie.addEventListener("change", () => {
-   //Obtiene el valor del productor seleccionado
-   const selectedSpecie = filterSpecie.value
-   let peliculasfiltradasEspecie;
+      if(selectedDirector === "all") {
+        peliculasfiltradasDirector = postersGhibli(dataStudioGhibli);
+      } else {
+        peliculasfiltradasDirector = filterDataDirector(dataStudioGhibli, selectedDirector);
+      }
+      postersGhibli(peliculasfiltradasDirector);
+    });
+  
+    //FILTRADO POR AÑO
+    const createYearList = () => {
+      //(1) Añade dos opciones "Ascendente" y "Descendente" en el select filterYear
+      const opcionAñoAscendente = document.createElement("option");
+      opcionAñoAscendente.value = "ascendente";
+      opcionAñoAscendente.textContent = "Ascendente"
+      filterYear.add(opcionAñoAscendente);
+  
+      const opcionAñoDescendente = document.createElement("option");
+      opcionAñoDescendente.value = "descendente";
+      opcionAñoDescendente.textContent = "Descendente"
+      filterYear.add(opcionAñoDescendente);
+    };
+    createYearList();
+ 
+    //(2) Agrega un evento al elegrir una opcion del select
+    filterYear.addEventListener("change", () => {
+  
+      //(3) Deacuerdo al valor seleccionado mostrará el array filtrado correspondiente en la seccion de posters.
+      let peliculasfiltradasAño;
+      if( filterYear.value === "ascendente") {
+        peliculasfiltradasAño = arrayAñoAscendente(dataStudioGhibli);
+      } else if(filterYear.value === "descendente") {
+        peliculasfiltradasAño = arrayAñoDescendente(dataStudioGhibli);
+      }
+      postersGhibli(peliculasfiltradasAño);
+    });
 
-   if (selectedSpecie === "all") {
-     peliculasfiltradasEspecie = postersGhibli(dataStudioGhibli);
-    }else {
-       peliculasfiltradasEspecie = filterDataSpecie(dataStudioGhibli, selectedSpecie);
-    }
-    postersGhibli(peliculasfiltradasEspecie);
-  })
-});
+    //FILTRADO POR ALFABETO
+    const createAlfabetoFilter = () => {
+   
+      //(1) Añade dos opciones "A-Z" y "Z-A" en el selectfilterAlfabeto
+      const opcionAZ = document.createElement("option");
+      opcionAZ.value = "a-z";
+      opcionAZ.textContent = "A-Z"
+      filterAlphabet.add(opcionAZ);
+   
+      const opcionZA = document.createElement("option");
+      opcionZA.value = "z-a";
+      opcionZA.textContent = "Z-A"
+      filterAlphabet.add(opcionZA);
+    };
+    createAlfabetoFilter();
+
+    //(2) Agrega un evento al elegrir una opcion del select, toma el valor seleccionado y vacia la seccion de posters
+    filterAlphabet.addEventListener("change", () => {
+    
+      //(5) De acuerdo al valor seleccionado mostrará el array filtrado correspondiente en la seccion de posters.
+      let peliculasfiltradasAlfabeto;
+      if(filterAlphabet.value === "a-z") {
+        peliculasfiltradasAlfabeto = arrayAlfabetoAZ(dataStudioGhibli);
+      } else if(filterAlphabet.value === "z-a") {
+        peliculasfiltradasAlfabeto = arrayAlfabetoZA(dataStudioGhibli);
+      }
+      postersGhibli(peliculasfiltradasAlfabeto);
+    });   
+ 
+    //FILTRADO POR ESPECIE
+    //(2) Inserta los valores del arrayProductores en select filterProducer
+    /* const createSpecieList = () => {
+      const filterSpecie = document.getElementById("filterSpecie")
+      //Itera y crea un opcion para darle un texto y un valor a los elementos del arrayProductores
+      arrayEspecies(dataStudioGhibli).forEach(function(specie) {
+        const opcionSpecie = document.createElement("option");
+        opcionSpecie.text = specie;
+        opcionSpecie.value = specie;
+        filterSpecie.add(opcionSpecie);
+      });
+    };
+    createSpecieList(); 
+
+    //Agrega un evento cuando se selecciona un productor, cambiando el valor del select 
+    filterSpecie.addEventListener("change", () => {
+    //Obtiene el valor del productor seleccionado
+      const selectedSpecie = filterSpecie.value
+      let peliculasfiltradasEspecie;
+
+      if (selectedSpecie === "all") {
+        peliculasfiltradasEspecie = postersGhibli(dataStudioGhibli);
+      }else {
+        peliculasfiltradasEspecie = filterDataSpecie(dataStudioGhibli, selectedSpecie);
+      }
+      postersGhibli(peliculasfiltradasEspecie);
+    })*/
+  });
   
