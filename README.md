@@ -48,32 +48,41 @@ HISTORIA DE USUARIO 5.
 Yo como: Usuario interesado en las películas animadas.
 Quiero: Saber que características tienen los personajes como nombre, edad, género, especie, etc.
 Para: Obtener mas conocimiento de las animaciones.
-HISTORIA DE USUARIO 5.
+
+HISTORIA DE USUARIO 6.
 Yo como: Usuario interesado en las películas animadas
 Quiero: saber cuáles son las locaciones y vehículos que tienen cada película.
 Para: conocer los detalles que los inspiro en su creación.
 
 
 ## 3. Prototipo de baja fidelidad
-insertar pantallazos figma 
+![prototipo](src/Assets/prototipo-baja-fidelidad.png)
 
 
 ## 4. Prototipo de alta fidelidad
-https://www.figma.com/proto/AUvHq0MHcmJOp4PYmd6T7R/Studio-Ghibli?type=design&node-id=130-15&scaling=scale-down&page-id=0%3A1&starting-point-node-id=130%3A15
-insertar pantallazos del figma con diseño asimetrico (el viejo)
+![prototipo](src/Assets/prototipo-de-alta-fidelidad.png)
 
 ## 5. Test de usabilidad
 A travez de la retroalimentación rebibida de nuestros usuarios se creo una lista con los posibles cambios o incovenientes de la pagina. Gracias a la lista se realizaron los cambios necesarios en nuestra pagina para asegurarnos de que la experiendia sea lo mas gratificante posible para el usuario.
 
-A continuación presentamos una lista que resumen las criticas que recibimos de nuestrods usuarios:
+A continuación presentamos una lista que resumen las criticas que recibimos de nuestros usuarios:
+
+-Reorganizar los poster de forma simetrica para mejorar la visualización de la pagina principal.
+-Cambiar los colores de la pagina de incio para que coincida con la pagina principal.
+-Eliminar las tarjetas de los productores y directores para  evitar repetir la información ya mencionada.
+-Usar colores oscuros para las paginas descripctivas, de esta forma homogenizar el diseño.
+-Añadir un boton que invite a ver la descripción de las peliculas.
+-Cambiar el titulo insertado en los posters ubicados en la pagina princiapal, para que sea mas consistente y facil de visulaizar cada poster
 
 
-insertar lista
+
+
 
 ## 6. Interfaz de usuario
 ¡Gracias por visitar nuestra página, descubre por que estas películas son tan queridas y disfruta explorando de la magia de Studio Ghibli con nosotros!
 
-insertar img de la interfaz
+![prototipo](src/Assets/interfaz.png)
+
 
 
 
