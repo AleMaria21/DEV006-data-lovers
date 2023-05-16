@@ -3,11 +3,11 @@
 ## Índice
 
 * [1. Definición del producto](#1-definición-del-producto)
-* [2. Historias de usuario](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Interfaz de usuario](#6-hacker-edition)
+* [2. Historias de usuario](#2-historias-de-usuario)
+* [3. prototipo de baja fidelidad](#4-prototipo-de-baja-fidelidad)
+* [4. Prototipo de alta fidelidad](#5-prototipo-de-alta-fidelidad)
+* [5. Test de usabilidad](#6-test-de-usabilidad)
+* [6. Interfaz de usuario](#6-Interfaz-de-usuario)
 
 ***
 
@@ -108,10 +108,14 @@ y personajes de cada película.
 
 
 ## 3. Prototipo de baja fidelidad
+[Link al prototipo interactivo de Figma](https://www.figma.com/proto/AUvHq0MHcmJOp4PYmd6T7R/Studio-Ghibli?type=design&node-id=586-10&scaling=scale-down&page-id=55%3A3&starting-point-node-id=586%3A9)
+
 ![prototipo](src/Assets/prototipo-baja-fidelidad.png)
 
 
 ## 4. Prototipo de alta fidelidad
+[Link al prototipo interactivo de Figma](https://www.figma.com/proto/AUvHq0MHcmJOp4PYmd6T7R/Studio-Ghibli?type=design&node-id=586-10&scaling=scale-down&page-id=55%3A3&starting-point-node-id=586%3A9)
+
 ![prototipo](src/Assets/prototipo-de-alta-fidelidad.png)
 
 ## 5. Test de usabilidad
