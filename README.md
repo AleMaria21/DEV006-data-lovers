@@ -119,13 +119,13 @@ A travez de la retroalimentación rebibida de nuestros usuarios se creo una list
 
 A continuación presentamos una lista que resumen las criticas que recibimos de nuestros usuarios:
 
-  ###
-  -Reorganizar los poster de forma simetrica para mejorar la visualización de la pagina principal.
-  -Cambiar los colores de la pagina de incio para que coincida con la pagina principal.
-  -Eliminar las tarjetas de los productores y directores para  evitar repetir la información ya mencionada.
-  -Usar colores oscuros para las paginas descripctivas, de esta forma homogenizar el diseño.
-  -Añadir un boton que invite a ver la descripción de las peliculas.
-  -Cambiar el titulo insertado en los posters ubicados en la pagina princiapal, para que sea mas consistente y facil de visulaizar cada     poster
+####
+-Reorganizar los poster de forma simetrica para mejorar la visualización de la pagina principal.
+-Cambiar los colores de la pagina de incio para que coincida con la pagina principal.
+-Eliminar las tarjetas de los productores y directores para  evitar repetir la información ya mencionada.
+-Usar colores oscuros para las paginas descripctivas, de esta forma homogenizar el diseño.
+-Añadir un boton que invite a ver la descripción de las peliculas.
+-Cambiar el titulo insertado en los posters ubicados en la pagina princiapal, para que sea mas consistente y facil de visulaizar cada poster
 
 
 
