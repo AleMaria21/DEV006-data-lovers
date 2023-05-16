@@ -4,7 +4,7 @@
 
 * [1. Definición del producto](#1-definición-del-producto)
 * [2. Historias de usuario](#2-historias-de-usuario)
-* [3. prototipo de baja fidelidad](#4-prototipo-de-baja-fidelidad)
+* [3. Prototipo de baja fidelidad](#4-prototipo-de-baja-fidelidad)
 * [4. Prototipo de alta fidelidad](#5-prototipo-de-alta-fidelidad)
 * [5. Test de usabilidad](#6-test-de-usabilidad)
 * [6. Interfaz de usuario](#6-Interfaz-de-usuario)
