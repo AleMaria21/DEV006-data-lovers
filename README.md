@@ -24,53 +24,87 @@ Ya sea que seas un fanático de Studio Ghibli de toda la vida o simplemente est�
 
 La creación de nuestra página se fundamentó principalmente en las opiniones y los comentarios realiazados en entrevistas con conocedores en el estudio, así como a personas comunes interesadas en su obra. Para recoplicar todos los comentarios y opiniones se craron "Historias de usuario" que resume y presenta las peticiones de los entrevistados con el fin comprender las necesidades y deseos de nuestros ususarios y mejorar la experiencia en nuestra pagina.
 
-HISTORIA DE USUARIO 1.
+#### Historia Uno
+- Yo cómo: Nuevo fan de Studio Ghibli.
+- Quiero: Saber cuántas películas animadas hay y cuáles son.
+- Para: Tener más conocimiento del contenido.
+- Criterios de Aceptación:
+    - Mostrar un mensaje de bienvenida.
+    - Mostrar todas las películas con su respectiva imagen.
+    - Mostrar un contador de la cantidad de las películas.
+    - Insertar opciones para filtrar las películas alfabeticamente (A-Z) (Z-A).
+- Definición de Terminado:
+    - Crear un `<header>` para el mensaje de bienvenida.
+    - Traer la data al `main.js`.
+    - Mostrar la data en el `index.html`.
+    - Incluir un `<p>` para el contador de películas y obtener el elemento por su id en el `main.js`.
 
-Yo como: Nuevo fan de Studio Ghibli.
+#### Historia Dos
+- Yo cómo: Nuevo fan de Studio Ghibli.
+- Quiero: Saber quienes son los directores y productores de las animaciones y saber cuántas y cuáles son las animaciones a las que dieron "vida".
+- Para: Tener más información de cada animación.
+- Criterios de Aceptación:
+    - Mostrar los directores.
+    - Mostrar los productores.
+    - Insertar un filtro y separar las películas según el director/productor seleccionado.
+    - Mostrar el contador de películas según el director/productor seleccionado.
+- Definición de Terminado:
+    - Crear los filtros en el `main.js`
+    - Generar un filtro general por director en el archivo `data.js` e importalo al `main.js`
+    - Crear un `addEventListener` para que la data se filtre y se muestre en el `<html>` por director.
+    - Generar un filtro general por productor en el archivo `data.js` e importarlo al `main.js`
+    - Crear un `addEventListener` para que la data se filtre y se muestre en el `<html>` por productor.
 
-Quiero: Saber cuántas peliculas animadas hay y cuáles son.
+#### Historia Tres
+- Yo cómo: Usuario fan de Studio Ghibli.
+- Quiero: Tener información relevante como descripción, fecha de lanzamiento, score, director, productor
+y personajes de cada película.
+- Para: Ser un fan que tiene más conocimiento de Studio Ghibli.
+- Criterios de Aceptación:
+    - Mostrar una descripción de cada película.
+    - Mostrar la fecha de lanzamiento de cada película
+    - Mostrar el score que tiene cada película.
+    - Mostrar el director y productor.
+    - Mostrar los personajes de cada película.
+- Definición de Terminado:
+    - Agregar contenedores en el `index.html` para poder crear una tercera página desde el `main.js`. 
+    - Agregar con la data, la fecha de lanzamiento.
+    - Agregar con la data, el score de cada pelicula.
+    - Agregar con la data, la descripción de cada película.
+    - Agregar con la data, el director y productor de cada película.
+    - Mostrar los personajes con su nombre e imágen.
+    - Crear un filtro en la página de posters, para que pueda ordenarlos por año (ascendente y descendente).
 
-Para: Tener más conocimiento del contenido.
+#### Historia Cuatro
+- Yo cómo: Usuario fan de Studio Ghibli.
+- Quiero: Saber cuántos y cuáles son los personajes de las animaciones.
+- Para: Poder demostrar mi conocimiento a las personas que les interese los animes.
+- Criterios de Aceptación:
+    - Mostrar los personajes de cada pelicula (realizado en la HU anterior).
+    - Mostrar un contador de la cantidad de personajes por película.
+- Definición de Terminado:
+    - Agregar al `main.js` un contador de personajes.
 
-HISTORIA DE USUARIO 2.
+#### Historia Cinco
+- Yo cómo: Usuario interesado en las películas animadas.
+- Quiero: Saber que características tienen los personajes como: nombres, edad, género, especie, etc.
+- Para: Obtener más conociminento de las animaciones.
+- Criterios de Aceptación:
+    - Mostrar los personajes y sus detalles como edad, género, especie, etc., de cada película.
+- Definición de Terminado:
+    - Agregarle al personaje sus detalles como edad, género, especie, color de ojos y de pelo.
 
-Yo como: Nuevo fan de Studio Ghibli.
-
-Quiero: Saber quienes son los directores y productores de las animaciones y saber cuántas y cuáles son las animaciones a las que dieron "vida".
-
-Para: Tener más información de cada animación.
-
-HISTORIA DE USUARIO 3.
-
-Yo como: Usuario fan de Studio Ghibli.
-
-Quiero: Tener información relevante como descripción, fecha de lanzamiento, peso, director, productor y personajes.
-
-Para: Ser un fan que tiene más conocimieto de Studio Ghibli.
-
-HISTORIA DE USUARIO 4.
-
-Yo como: Usuario fan de Studio Ghibli.
-
-Quiero: Saber cuántos y cuáles son sus personajes de cada animación.
-
-Para: Poder demostrar mi conocimiento a las personas que les interese los animes.
-
-HISTORIA DE USUARIO 5.
-
-Yo como: Usuario interesado en las películas animadas.
-
-Quiero: Saber que características tienen los personajes como nombre, edad, género, especie, etc.
-
-Para: Obtener mas conocimiento de las animaciones.
-
-HISTORIA DE USUARIO 6.
-
-Yo como: Usuario interesado en las películas animadas.
-
-Quiero: saber cuáles son las locaciones y vehículos que tienen cada película.
-
-Para: conocer los detalles que los inspiro en su creación.
+#### Historia Seis
+- Yo cómo: Usuario admirador de los paisajes y vehículos ilustrados o animados.
+- Quiero: Saber cuáles son las locaciones y vehículos que tiene cada película.
+- Para: Conocer como ilustraron en sus películas.
+- Criterios de Aceptación:
+    - Mostrar las locaciones de cada película.
+    - Mostrar los vehículos utilizados en cada película.
+- Definición de Terminado:
+    - Crear en la tercera página cards con las locaciones y vehículos.
+    - Por cada locación agregaremos su información como nombre, imagen, el clima, terreno, superficie de agua y habitantes.
+    - Por cada vehículo agregaremos su información como nombre, imagen, descripción, clase, longitud y piloto.    
 
 
 ## 3. Prototipo de baja fidelidad
