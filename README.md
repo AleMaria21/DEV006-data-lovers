@@ -119,6 +119,7 @@ A travez de la retroalimentación rebibida de nuestros usuarios se creo una list
 
 A continuación presentamos una lista que resumen las criticas que recibimos de nuestros usuarios:
 
+###
 -Reorganizar los poster de forma simetrica para mejorar la visualización de la pagina principal.
 -Cambiar los colores de la pagina de incio para que coincida con la pagina principal.
 -Eliminar las tarjetas de los productores y directores para  evitar repetir la información ya mencionada.
