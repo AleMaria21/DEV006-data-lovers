@@ -123,9 +123,9 @@ A continuación presentamos una lista que resumen las criticas que recibimos de 
 - Reorganizar los poster de forma simetrica para mejorar la visualización de la pagina principal.
 - Cambiar los colores de la pagina de incio para que coincida con la pagina principal.
 - Eliminar las tarjetas de los productores y directores para  evitar repetir la información ya mencionada.
-- Usar colores oscuros para las paginas descripctivas, de esta forma homogenizar el diseño.
+- Usar colores oscuros para las paginas descripctivas, con el fin de homogenizar el diseño de la interfaz.
 - Añadir un boton que invite a ver la descripción de las peliculas.
-- Cambiar el titulo insertado en los posters ubicados en la pagina princiapal, para que sea mas consistente y facil de visulaizar cada poster
+- Cambiar el titulo insertado en los posters de la pagina princiapal, para que sea mas consistente y facil de visulaizar cada poster
 
 
 
