@@ -26,38 +26,50 @@ La creación de nuestra página se fundamentó principalmente en las opiniones y
 
 HISTORIA DE USUARIO 1.
 
-Yo como: Nuevo fan de Studio Ghibli
+Yo como: Nuevo fan de Studio Ghibli.
+
 Quiero: Saber cuántas peliculas animadas hay y cuáles son.
+
 Para: Tener más conocimiento del contenido.
 
 HISTORIA DE USUARIO 2.
 
-Yo como: Nuevo fan de Studio Ghibli
+Yo como: Nuevo fan de Studio Ghibli.
+
 Quiero: Saber quienes son los directores y productores de las animaciones y saber cuántas y cuáles son las animaciones a las que dieron "vida".
+
 Para: Tener más información de cada animación.
 
 HISTORIA DE USUARIO 3.
 
-Yo como: Usuario fan de Studio Ghibli
+Yo como: Usuario fan de Studio Ghibli.
+
 Quiero: Tener información relevante como descripción, fecha de lanzamiento, peso, director, productor y personajes.
+
 Para: Ser un fan que tiene más conocimieto de Studio Ghibli.
 
 HISTORIA DE USUARIO 4.
 
-Yo como: Usuario fan de Studio Ghibli
+Yo como: Usuario fan de Studio Ghibli.
+
 Quiero: Saber cuántos y cuáles son sus personajes de cada animación.
+
 Para: Poder demostrar mi conocimiento a las personas que les interese los animes.
 
 HISTORIA DE USUARIO 5.
 
 Yo como: Usuario interesado en las películas animadas.
+
 Quiero: Saber que características tienen los personajes como nombre, edad, género, especie, etc.
+
 Para: Obtener mas conocimiento de las animaciones.
 
 HISTORIA DE USUARIO 6.
 
-Yo como: Usuario interesado en las películas animadas
+Yo como: Usuario interesado en las películas animadas.
+
 Quiero: saber cuáles son las locaciones y vehículos que tienen cada película.
+
 Para: conocer los detalles que los inspiro en su creación.
 
 
